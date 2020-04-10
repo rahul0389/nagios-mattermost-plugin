@@ -25,6 +25,7 @@ The steps below are for a Nagios xi server but should work with minimal modifica
         command_name notify-service-by-mattermost
         command_line /usr/local/nagios/libexec/mattermost.py --url [MATTERMOST-API-URL] \
                                                              --channel [MATTERMOST-CHANNEL-ID] \
+                                                             --authorizationtoken [authorization token for bot] \
                                                              --notificationtype "$NOTIFICATIONTYPE$" \
                                                              --hostalias "$HOSTNAME$" \
                                                              --hostaddress "$HOSTADDRESS$" \
@@ -37,6 +38,7 @@ The steps below are for a Nagios xi server but should work with minimal modifica
         command_name notify-host-by-mattermost
         command_line /usr/local/nagios/libexec/mattermost.py --url [MATTERMOST-API-URL] \
                                                              --channel [MATTERMOST-CHANNEL-ID] \
+                                                             --authorizationtoken [authorization token for bot] \
                                                              --notificationtype "$NOTIFICATIONTYPE$" \
                                                              --hostalias "$HOSTNAME$" \
                                                              --hostaddress "$HOSTADDRESS$" \
